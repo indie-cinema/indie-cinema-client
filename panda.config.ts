@@ -1,4 +1,7 @@
-import { defineConfig } from "@pandacss/dev";
+import { colors } from "@/styles/colors";
+import { textStyles } from "@/styles/textStyles";
+import { zIndex } from "@/styles/zIndex";
+import { defineConfig, defineTextStyles, defineTokens } from "@pandacss/dev";
 
 export default defineConfig({
   // Whether to use css reset
@@ -12,7 +15,13 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      textStyles: defineTextStyles(textStyles),
+      tokens: {
+        zIndex: defineTokens.zIndex(zIndex),
+        colors: defineTokens.colors(colors),
+      },
+    },
   },
 
   // The output directory for your css system
