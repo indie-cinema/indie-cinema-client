@@ -10,6 +10,7 @@
     "prepare": "panda codegen"
   },
   "dependencies": {
+    "@seed-design/icon": "^0.6.2",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
