@@ -3,13 +3,17 @@ import Header from '@/components/base/Header';
 import Layout from '@/components/base/Layout';
 import { css } from '@styled-system/css';
 
+import Providers from './providers';
+
 import './globals.css';
 
 const RootLayout = ({ children }: React.PropsWithChildren) => {
   return (
     <html className={htmlStyle} lang="kr">
       <body>
-        <Layout header={<Header />}>{children}</Layout>
+        <Providers>
+          <Layout header={<Header />}>{children}</Layout>
+        </Providers>
       </body>
     </html>
   );
