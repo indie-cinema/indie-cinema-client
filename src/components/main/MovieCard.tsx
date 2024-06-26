@@ -1,7 +1,10 @@
+import React from 'react';
 import { css } from '@styled-system/css';
 
-const MovieCard = () => {
-  return <div className={movieCardStyle}></div>;
+type MovieCardProps = React.HTMLAttributes<HTMLDivElement>;
+
+const MovieCard = ({ ...props }: MovieCardProps) => {
+  return <div className={movieCardStyle} {...props}></div>;
 };
 
 export default MovieCard;
